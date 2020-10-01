@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button class="login" data-click>LOGIN
+        <div class="dotbox">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <svg t="1601537685304" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8523" width="48" height="48"><path d="M343.7 851.7c-20 0-40-7.6-55.3-22.9L6.5 547c-8.7-8.7-8.7-22.8 0-31.5s22.8-8.7 31.5 0l281.9 281.9c6.3 6.3 14.8 9.8 23.8 9.8s17.5-3.5 23.8-9.8L986 178.8c8.7-8.7 22.8-8.7 31.5 0s8.7 22.8 0 31.5L399 828.8c-15.3 15.3-35.3 22.9-55.3 22.9z" fill="#ffffff" p-id="8524"></path></svg>
+    </button>
+</body>
+<script>
+    document.addEventListener('click',function(event){
+        let target = event.target.closest('[data-click]');
+        if(!target) return ;
+        // alert(1);
+        target.classList.add('active')
+
+    })
+</script>
+
+</html>

@@ -21,6 +21,9 @@ body button.login {
   transition: all 0.4s;
   cursor: pointer;
 }
+body button.login svg {
+  display: none;
+}
 body button.login.active {
   width: 100px;
   color: transparent;
@@ -51,8 +54,39 @@ body button.login.active .dotbox .dot:nth-child(2) {
 body button.login.active .dotbox .dot:nth-child(3) {
   animation-delay: 0.4s;
 }
+body button.login.active.verify {
+  overflow: hidden;
+}
+body button.login.active.verify .dotbox {
+  display: none;
+}
+body button.login.active.verify svg {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  display: initial;
+}
+body button.login.active.verify .mengban {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  animation: goLeft 1s forwards;
+}
 @keyframes loding {
   to {
     transform: translate(0, -20px);
+  }
+}
+@keyframes goLeft {
+  form {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%) translate(50px, 0);
   }
 }
